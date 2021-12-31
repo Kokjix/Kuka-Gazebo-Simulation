@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<launch>
+
+
+<include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="paused" value="true"/>
+</include> 
+
+<param name="robot_description" command="xacro --inorder $(find kuka_kr10_support)/urdf/kr10r1100sixx.urdf.xacro"/>
+
+<node
+    name="spawn_model"
+    pkg="gazebo_ros"
+    type="spawn_model"
+    args="-urdf -param robot_description -model kuka_kr10r1100sixx"
+    output="screen" />
+
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+<!-- load arm pid gains-->
+<!-- <rosparam file="$(find kuka_kr10_support)/config/ros_control_params.yaml" command="load"/> -->
+<include file="$(find kuka_kr10_support)/launch/controller.launch"/>
+
+</launch>

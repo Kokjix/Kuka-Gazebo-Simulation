@@ -1,0 +1,359 @@
+<?xml version="1.0"?>
+<robot name="kuka_kr10r1100sixx" xmlns:xacro="http://wiki.ros.org/xacro">
+  <xacro:include filename="$(find kuka_resources)/urdf/common_constants.xacro" />
+  <xacro:include filename="$(find kuka_resources)/urdf/common_materials.xacro" />
+
+  <link name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0 0.0 0.0"
+        rpy="0 0 0" />
+      <mass
+        value="0.411618821021088" />
+      <inertia
+        ixx="0.0"
+        ixy="6.69726144960896E-08"
+        ixz="9.00572683008283E-06"
+        iyy="0.0010631031887322"
+        iyz="1.77926936295964E-08"
+        izz="0.0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://kuka_kr10_support/meshes/kr10r1100sixx/visual/base_link.stl" />
+      </geometry>
+      <xacro:material_kuka_black />
+    </visual>
+    <!-- <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://kuka_kr10_support/meshes/kr10r1100sixx/collision/base_link.stl" />
+      </geometry>
+    </collision> -->
+  </link>
+  <link name="link_1">
+    <inertial>
+      <origin
+        xyz="0.0 0.0 0.0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0770611517678769" />
+      <inertia
+        ixx="7.31556605560956E-05"
+        ixy="2.16490131798925E-07"
+        ixz="3.64236356424029E-07"
+        iyy="9.76213364699092E-05"
+        iyz="2.78454870972715E-06"
+        izz="0.0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://kuka_kr10_support/meshes/kr10r1100sixx/visual/link_1.stl" />
+      </geometry>
+      <xacro:material_kuka_orange />
+    </visual>
+    <!-- <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://kuka_kr10_support/meshes/kr10r1100sixx/collision/link_1.stl" />
+      </geometry>
+    </collision> -->
+  </link>
+  <link name="link_2">
+    <inertial>
+      <origin
+        xyz="0.0 0.0 0.0"
+        rpy="0 0 0" />
+      <mass
+        value="0.133412478322977" />
+      <inertia
+        ixx="0.000210283128741102"
+        ixy="0.000267898808044728"
+        ixz="8.24547542174741E-07"
+        iyy="0.0"
+        iyz="-1.49191228019289E-07"
+        izz="0.0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://kuka_kr10_support/meshes/kr10r1100sixx/visual/link_2.stl" />
+      </geometry>
+      <xacro:material_kuka_orange />
+    </visual>
+    <!-- <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://kuka_kr10_support/meshes/kr10r1100sixx/collision/link_2.stl" />
+      </geometry>
+    </collision> -->
+  </link>
+  <link name="link_3">
+    <inertial>
+      <origin
+        xyz="0.0 0.0 0.0"
+        rpy="0 0 0" />
+      <mass
+        value="0.321239553591392" />
+      <inertia
+        ixx="0.000653318723180021"
+        ixy="1.86012255814898E-05"
+        ixz="-6.36880707796283E-05"
+        iyy="0.000432403266409972"
+        iyz="-6.89676089884139E-06"
+        izz="0.000729719045023718" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://kuka_kr10_support/meshes/kr10r1100sixx/visual/link_3.stl" />
+      </geometry>
+      <xacro:material_kuka_orange />
+    </visual>
+    <!-- <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://kuka_kr10_support/meshes/kr10r1100sixx/collision/link_3.stl" />
+      </geometry>
+    </collision> -->
+  </link>
+  <link name="link_4">
+    <inertial>
+      <origin
+        xyz="0.0 0.0 0.0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0499523863702407" />
+      <inertia
+        ixx="0.00173055801721154"
+        ixy="-0.000361419005495416"
+        ixz="-6.11717117688946E-06"
+        iyy="0.00101306670353097"
+        iyz="-2.01580605449022E-05"
+        izz="0.00248653323750693" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://kuka_kr10_support/meshes/kr10r1100sixx/visual/link_4.stl" />
+      </geometry>
+      <xacro:material_kuka_orange />
+    </visual>
+    <!-- <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://kuka_kr10_support/meshes/kr10r1100sixx/collision/link_4.stl" />
+      </geometry>
+    </collision> -->
+  </link>
+  <link name="link_5">
+    <inertial>
+      <origin
+        xyz="0.0 0.0 0.0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0403763446487952" />
+      <inertia
+        ixx="0.00111272731474711"
+        ixy="-3.44604690973373E-05"
+        ixz="3.20129398499904E-06"
+        iyy="0.000490209836558671"
+        iyz="5.80828573622672E-05"
+        izz="0.0010797067423783" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://kuka_kr10_support/meshes/kr10r1100sixx/visual/link_5.stl" />
+      </geometry>
+      <xacro:material_kuka_orange />
+    </visual>
+    <!-- <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://kuka_kr10_support/meshes/kr10r1100sixx/collision/link_5.stl" />
+      </geometry>
+    </collision> -->
+  </link>
+  <link name="link_6">
+    <inertial>
+      <origin
+        xyz="0.0 0.0 0.0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0559735468471101" />
+      <inertia
+        ixx="0.000945557905226613"
+        ixy="3.24926973843139E-05"
+        ixz="-2.09155403595635E-06"
+        iyy="0.000970019451241293"
+        iyz="1.4404192920651E-06"
+        izz="0.000707313841265861" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://kuka_kr10_support/meshes/kr10r1100sixx/visual/link_6.stl" />
+      </geometry>
+      <xacro:material_kuka_pedestal />
+    </visual>
+    <!-- <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://kuka_kr10_support/meshes/kr10r1100sixx/collision/link_6.stl" />
+      </geometry>
+    </collision> -->
+  </link>
+  <!-- Following REP199, this frame shall be use to attach EEF or other equipment -->
+  <link name="flange" />
+
+  <!-- ROS base_link to KUKA $ROBROOT coordinate system transform -->
+  <link name="world"></link>
+
+  <joint name="dummy" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="world" />
+    <child link="base_link" />
+  </joint>
+  <link name="base" />
+  <joint name="base_link-base" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="base" />
+  </joint>
+
+  <joint name="joint_a1" type="revolute">
+    <origin xyz="0 0 0.400" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="link_1" />
+    <axis xyz="0 0 -1" />
+    <limit effort="0" lower="-3.14"  upper="3.14" velocity="${radians(300)}" />
+  </joint>
+  <joint name="joint_a2" type="revolute">
+    <origin xyz="0.025 0 0" rpy="0 0 0" />
+    <parent link="link_1" />
+    <child link="link_2" />
+    <axis xyz="0 1 0" />
+    <limit effort="0" lower="-3.14"  upper="3.14" velocity="${radians(225)}" />
+  </joint>
+  <joint name="joint_a3" type="revolute">
+    <origin xyz="0.560 0 0" rpy="0 0 0" />
+    <parent link="link_2" />
+    <child link="link_3" />
+    <axis xyz="0 1 0" />
+    <limit effort="0" lower="-3.14"  upper="3.14" velocity="${radians(225)}" />
+  </joint>
+  <joint name="joint_a4" type="revolute">
+    <origin xyz="0 0 0.035" rpy="0 0 0" />
+    <parent link="link_3" />
+    <child link="link_4" />
+    <axis xyz="-1 0 0" />
+    <limit effort="0" lower="-3.14"  upper="3.14" velocity="${radians(381)}" />
+  </joint>
+  <joint name="joint_a5" type="revolute">
+    <origin xyz="0.515 0 0" rpy="0 0 0" />
+    <parent link="link_4" />
+    <child link="link_5" />
+    <axis xyz="0 1 0" />
+    <limit effort="0" lower="-3.14"  upper="3.14" velocity="${radians(311)}" />
+  </joint>
+  <joint name="joint_a6" type="revolute">
+    <origin xyz="0.080 0 0" rpy="0 0 0" />
+    <parent link="link_5" />
+    <child link="link_6" />
+    <axis xyz="-1 0 0" />
+    <limit effort="0" lower="-3.14" upper="3.14" velocity="${radians(492)}" />
+  </joint>
+  <joint name="joint_a6-flange" type="fixed">
+    <parent link="link_6" />
+    <child link="flange" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+
+  <!-- This frame corresponds to the $TOOL coordinate system in KUKA KRC controllers -->
+  <link name="tool0" />
+  <joint name="flange-tool0" type="fixed">
+    <parent link="flange" />
+    <child link="tool0" />
+    <origin xyz="0 0 0" rpy="0 ${radians(90)} 0" />
+  </joint>
+
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+      <legacyModeNS>true</legacyModeNS>
+      <controlPeriod>0.001</controlPeriod>
+      <robotNamespace></robotNamespace>
+    </plugin>
+  </gazebo>
+
+
+  <!-- arm transmittions-->
+  <transmission name="tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_a1">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor1">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="tran2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_a2">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor2">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="tran3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_a3">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor3">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="tran4">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_a4">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor4">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="tran5">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_a5">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor5">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="tran6">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_a6">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor6">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+</robot>
